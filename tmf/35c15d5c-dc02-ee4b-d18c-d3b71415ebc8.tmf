@@ -1,0 +1,274 @@
+// PDB:  o:\blue.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\msv1_0.pdb
+// PDB:  Last Updated :2016-4-9:22:15:3:291 (UTC) [binplace]
+35c15d5c-dc02-ee4b-d18c-d3b71415ebc8 dll // SRC=msvsam.c MJ= MN=
+#typev msvsam_c3959 30 "%0MsvSamValidate failed with %10!#x!" //   LEVEL=SSP_CRED FUNC=MsvSamValidate
+{
+Status, ItemLong -- 10
+}
+#typev msvsam_c3863 29 "%0trying Guest account" //   LEVEL=SSP_CRED FUNC=MsvSamValidate
+{
+}
+#typev msvsam_c3791 28 "%0forceGuest" //   LEVEL=SSP_CRED FUNC=MsvSamValidate
+{
+}
+#typev msvsam_c3659 27 "%0MsvValidateTarget accepted %10!s!\%11!s!" //   LEVEL=SSP_CRED FUNC=MsvValidateTarget
+{
+&Candidate, ItemPWString -- 10
+ComputerName, ItemPWString -- 11
+}
+#typev msvsam_c3653 26 "%0failed MsvAvNbDomainName compare expected %10!s!, received %11!s!" //   LEVEL=SSP_WARNING FUNC=MsvValidateTarget
+{
+&NtLmGlobalUnicodePrimaryDomainNameString, ItemPWString -- 10
+&Candidate, ItemPWString -- 11
+}
+#typev msvsam_c3633 25 "%0no target domain supplied" //   LEVEL=SSP_WARNING FUNC=MsvValidateTarget
+{
+}
+#typev msvsam_c3625 24 "%0failed NbComputerName compare expected %10!s!, received %11!s!" //   LEVEL=SSP_WARNING FUNC=MsvValidateTarget
+{
+ComputerName, ItemPWString -- 10
+&Candidate, ItemPWString -- 11
+}
+#typev msvsam_c3609 23 "%0no target computer supplied" //   LEVEL=SSP_WARNING FUNC=MsvValidateTarget
+{
+}
+#typev msvsam_c3459 22 "%0MsvpGetLastLogonInfo failed to get last logon info for user %10!s!, %11!#x!" //   LEVEL=SSP_WARNING FUNC=MsvpGetLastLogonInfo
+{
+UserName, ItemPWString -- 10
+Status, ItemLong -- 11
+}
+#typev msvsam_c216 10 "%0MsvpLm3ValidateResponse returning %10!s!" //   LEVEL=SSP_NTLM_V2 FUNC=MsvpLm3ValidateResponse
+{
+(i == MSV1_0_NTLM3_RESPONSE_LENGTH) ? 'true' : 'false', ItemString -- 10
+}
+#typev msvsam_c703 14 "%0MsvpPasswordValidate MsvpNtlm3ValidateResponse(LmResponse) returns %10!s!" //   LEVEL=SSP_NTLM_V2 FUNC=MsvpPasswordValidate
+{
+AlreadyValidated ? 'true' : 'false', ItemString -- 10
+}
+#typev msvsam_c660 13 "%0MsvpPasswordValidate MsvpNtlm3ValidateResponse(NtResponse) returns %10!s!" //   LEVEL=SSP_NTLM_V2 FUNC=MsvpPasswordValidate
+{
+AlreadyValidated ? 'true' : 'false', ItemString -- 10
+}
+#typev msvsam_c634 12 "%0MsvpPasswordValidate NetworkLogon ParameterControl %10!#x!, user "%11!s!", domain "%12!s!", workstation "%13!s!", NtRespLen %14!#x!, LmRespLen %15!#x!" //   LEVEL=SSP_CRED FUNC=MsvpPasswordValidate
+{
+LogonNetworkInfo->Identity.ParameterControl, ItemLong -- 10
+&LogonNetworkInfo->Identity.UserName, ItemPWString -- 11
+&LogonNetworkInfo->Identity.LogonDomainName, ItemPWString -- 12
+&LogonNetworkInfo->Identity.Workstation, ItemPWString -- 13
+LogonNetworkInfo->NtChallengeResponse.Length, ItemLong -- 14
+LogonNetworkInfo->LmChallengeResponse.Length, ItemLong -- 15
+}
+#typev msvsam_c3107 21 "%0MsvpSamValidate NOT incrementing badpassword count for user %10!s!, GuestRelativeId %11!d!: prev %12!s!, preprev %13!s!" //   LEVEL=SSP_CRED FUNC=MsvpSamValidate
+{
+&LocalUserName, ItemPWString -- 10
+GuestRelativeId, ItemLong -- 11
+IsPrev ? 'true' : 'false', ItemString -- 12
+IsPrevPrev ? 'true' : 'false', ItemString -- 13
+}
+#typev msvsam_c3100 20 "%0MsvpSamValidate incrementing badpassword count for user %10!s!, GuestRelativeId %11!d!" //   LEVEL=SSP_CRED FUNC=MsvpSamValidate
+{
+&LocalUserName, ItemPWString -- 10
+GuestRelativeId, ItemLong -- 11
+}
+#typev msvsam_c1672 15 "%0SamIGetUserLogonInformationXXX failed with %10!#x!" //   LEVEL=SSP_CRITICAL FUNC=MsvpSamValidate
+{
+Status, ItemLong -- 10
+}
+#typev msvsam_c2577 19 "%0MsvpSamValidate adding last logon info" //   LEVEL=SSP_WARNING FUNC=MsvpSamValidate
+{
+}
+#typev msvsam_c2159 18 "%0MsvpSamValidate used previous password for user %10!s!, GuestRelativeId %11!d!" //   LEVEL=SSP_CRED FUNC=MsvpSamValidate
+{
+&LocalUserName, ItemPWString -- 10
+GuestRelativeId, ItemLong -- 11
+}
+#typev msvsam_c2138 17 "%0MsvpSamValidate checked prev password failed with %10!#x!" //   LEVEL=SSP_CRITICAL FUNC=MsvpSamValidate
+{
+Status, ItemLong -- 10
+}
+#typev msvsam_c2078 16 "%0MsvpSamValidate user %10!s! requires smartcard logons" //   LEVEL=SSP_CRED FUNC=MsvpSamValidate
+{
+&LocalUserName, ItemPWString -- 10
+}
+// PDB:  o:\blue.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\bbt-opt\msv1_0.pdb
+// PDB:  Last Updated :2016-4-9:22:15:44:514 (UTC) [binplace]
+#typev msvsam_c3959 30 "%0MsvSamValidate failed with %10!#x!" //   LEVEL=SSP_CRED FUNC=MsvSamValidate
+{
+Status, ItemLong -- 10
+}
+#typev msvsam_c3863 29 "%0trying Guest account" //   LEVEL=SSP_CRED FUNC=MsvSamValidate
+{
+}
+#typev msvsam_c3791 28 "%0forceGuest" //   LEVEL=SSP_CRED FUNC=MsvSamValidate
+{
+}
+#typev msvsam_c3659 27 "%0MsvValidateTarget accepted %10!s!\%11!s!" //   LEVEL=SSP_CRED FUNC=MsvValidateTarget
+{
+&Candidate, ItemPWString -- 10
+ComputerName, ItemPWString -- 11
+}
+#typev msvsam_c3653 26 "%0failed MsvAvNbDomainName compare expected %10!s!, received %11!s!" //   LEVEL=SSP_WARNING FUNC=MsvValidateTarget
+{
+&NtLmGlobalUnicodePrimaryDomainNameString, ItemPWString -- 10
+&Candidate, ItemPWString -- 11
+}
+#typev msvsam_c3633 25 "%0no target domain supplied" //   LEVEL=SSP_WARNING FUNC=MsvValidateTarget
+{
+}
+#typev msvsam_c3625 24 "%0failed NbComputerName compare expected %10!s!, received %11!s!" //   LEVEL=SSP_WARNING FUNC=MsvValidateTarget
+{
+ComputerName, ItemPWString -- 10
+&Candidate, ItemPWString -- 11
+}
+#typev msvsam_c3609 23 "%0no target computer supplied" //   LEVEL=SSP_WARNING FUNC=MsvValidateTarget
+{
+}
+#typev msvsam_c3459 22 "%0MsvpGetLastLogonInfo failed to get last logon info for user %10!s!, %11!#x!" //   LEVEL=SSP_WARNING FUNC=MsvpGetLastLogonInfo
+{
+UserName, ItemPWString -- 10
+Status, ItemLong -- 11
+}
+#typev msvsam_c216 10 "%0MsvpLm3ValidateResponse returning %10!s!" //   LEVEL=SSP_NTLM_V2 FUNC=MsvpLm3ValidateResponse
+{
+(i == MSV1_0_NTLM3_RESPONSE_LENGTH) ? 'true' : 'false', ItemString -- 10
+}
+#typev msvsam_c703 14 "%0MsvpPasswordValidate MsvpNtlm3ValidateResponse(LmResponse) returns %10!s!" //   LEVEL=SSP_NTLM_V2 FUNC=MsvpPasswordValidate
+{
+AlreadyValidated ? 'true' : 'false', ItemString -- 10
+}
+#typev msvsam_c660 13 "%0MsvpPasswordValidate MsvpNtlm3ValidateResponse(NtResponse) returns %10!s!" //   LEVEL=SSP_NTLM_V2 FUNC=MsvpPasswordValidate
+{
+AlreadyValidated ? 'true' : 'false', ItemString -- 10
+}
+#typev msvsam_c634 12 "%0MsvpPasswordValidate NetworkLogon ParameterControl %10!#x!, user "%11!s!", domain "%12!s!", workstation "%13!s!", NtRespLen %14!#x!, LmRespLen %15!#x!" //   LEVEL=SSP_CRED FUNC=MsvpPasswordValidate
+{
+LogonNetworkInfo->Identity.ParameterControl, ItemLong -- 10
+&LogonNetworkInfo->Identity.UserName, ItemPWString -- 11
+&LogonNetworkInfo->Identity.LogonDomainName, ItemPWString -- 12
+&LogonNetworkInfo->Identity.Workstation, ItemPWString -- 13
+LogonNetworkInfo->NtChallengeResponse.Length, ItemLong -- 14
+LogonNetworkInfo->LmChallengeResponse.Length, ItemLong -- 15
+}
+#typev msvsam_c3107 21 "%0MsvpSamValidate NOT incrementing badpassword count for user %10!s!, GuestRelativeId %11!d!: prev %12!s!, preprev %13!s!" //   LEVEL=SSP_CRED FUNC=MsvpSamValidate
+{
+&LocalUserName, ItemPWString -- 10
+GuestRelativeId, ItemLong -- 11
+IsPrev ? 'true' : 'false', ItemString -- 12
+IsPrevPrev ? 'true' : 'false', ItemString -- 13
+}
+#typev msvsam_c3100 20 "%0MsvpSamValidate incrementing badpassword count for user %10!s!, GuestRelativeId %11!d!" //   LEVEL=SSP_CRED FUNC=MsvpSamValidate
+{
+&LocalUserName, ItemPWString -- 10
+GuestRelativeId, ItemLong -- 11
+}
+#typev msvsam_c1672 15 "%0SamIGetUserLogonInformationXXX failed with %10!#x!" //   LEVEL=SSP_CRITICAL FUNC=MsvpSamValidate
+{
+Status, ItemLong -- 10
+}
+#typev msvsam_c2577 19 "%0MsvpSamValidate adding last logon info" //   LEVEL=SSP_WARNING FUNC=MsvpSamValidate
+{
+}
+#typev msvsam_c2159 18 "%0MsvpSamValidate used previous password for user %10!s!, GuestRelativeId %11!d!" //   LEVEL=SSP_CRED FUNC=MsvpSamValidate
+{
+&LocalUserName, ItemPWString -- 10
+GuestRelativeId, ItemLong -- 11
+}
+#typev msvsam_c2138 17 "%0MsvpSamValidate checked prev password failed with %10!#x!" //   LEVEL=SSP_CRITICAL FUNC=MsvpSamValidate
+{
+Status, ItemLong -- 10
+}
+#typev msvsam_c2078 16 "%0MsvpSamValidate user %10!s! requires smartcard logons" //   LEVEL=SSP_CRED FUNC=MsvpSamValidate
+{
+&LocalUserName, ItemPWString -- 10
+}
+// PDB:  o:\blue.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\nopogo\msv1_0.pdb
+// PDB:  Last Updated :2016-4-9:22:15:14:89 (UTC) [binplace]
+#typev msvsam_c3863 29 "%0trying Guest account" //   LEVEL=SSP_CRED FUNC=MsvSamValidate
+{
+}
+#typev msvsam_c3959 30 "%0MsvSamValidate failed with %10!#x!" //   LEVEL=SSP_CRED FUNC=MsvSamValidate
+{
+Status, ItemLong -- 10
+}
+#typev msvsam_c3791 28 "%0forceGuest" //   LEVEL=SSP_CRED FUNC=MsvSamValidate
+{
+}
+#typev msvsam_c3659 27 "%0MsvValidateTarget accepted %10!s!\%11!s!" //   LEVEL=SSP_CRED FUNC=MsvValidateTarget
+{
+&Candidate, ItemPWString -- 10
+ComputerName, ItemPWString -- 11
+}
+#typev msvsam_c3653 26 "%0failed MsvAvNbDomainName compare expected %10!s!, received %11!s!" //   LEVEL=SSP_WARNING FUNC=MsvValidateTarget
+{
+&NtLmGlobalUnicodePrimaryDomainNameString, ItemPWString -- 10
+&Candidate, ItemPWString -- 11
+}
+#typev msvsam_c3633 25 "%0no target domain supplied" //   LEVEL=SSP_WARNING FUNC=MsvValidateTarget
+{
+}
+#typev msvsam_c3625 24 "%0failed NbComputerName compare expected %10!s!, received %11!s!" //   LEVEL=SSP_WARNING FUNC=MsvValidateTarget
+{
+ComputerName, ItemPWString -- 10
+&Candidate, ItemPWString -- 11
+}
+#typev msvsam_c3609 23 "%0no target computer supplied" //   LEVEL=SSP_WARNING FUNC=MsvValidateTarget
+{
+}
+#typev msvsam_c3459 22 "%0MsvpGetLastLogonInfo failed to get last logon info for user %10!s!, %11!#x!" //   LEVEL=SSP_WARNING FUNC=MsvpGetLastLogonInfo
+{
+UserName, ItemPWString -- 10
+Status, ItemLong -- 11
+}
+#typev msvsam_c216 10 "%0MsvpLm3ValidateResponse returning %10!s!" //   LEVEL=SSP_NTLM_V2 FUNC=MsvpLm3ValidateResponse
+{
+(i == MSV1_0_NTLM3_RESPONSE_LENGTH) ? 'true' : 'false', ItemString -- 10
+}
+#typev msvsam_c703 14 "%0MsvpPasswordValidate MsvpNtlm3ValidateResponse(LmResponse) returns %10!s!" //   LEVEL=SSP_NTLM_V2 FUNC=MsvpPasswordValidate
+{
+AlreadyValidated ? 'true' : 'false', ItemString -- 10
+}
+#typev msvsam_c660 13 "%0MsvpPasswordValidate MsvpNtlm3ValidateResponse(NtResponse) returns %10!s!" //   LEVEL=SSP_NTLM_V2 FUNC=MsvpPasswordValidate
+{
+AlreadyValidated ? 'true' : 'false', ItemString -- 10
+}
+#typev msvsam_c634 12 "%0MsvpPasswordValidate NetworkLogon ParameterControl %10!#x!, user "%11!s!", domain "%12!s!", workstation "%13!s!", NtRespLen %14!#x!, LmRespLen %15!#x!" //   LEVEL=SSP_CRED FUNC=MsvpPasswordValidate
+{
+LogonNetworkInfo->Identity.ParameterControl, ItemLong -- 10
+&LogonNetworkInfo->Identity.UserName, ItemPWString -- 11
+&LogonNetworkInfo->Identity.LogonDomainName, ItemPWString -- 12
+&LogonNetworkInfo->Identity.Workstation, ItemPWString -- 13
+LogonNetworkInfo->NtChallengeResponse.Length, ItemLong -- 14
+LogonNetworkInfo->LmChallengeResponse.Length, ItemLong -- 15
+}
+#typev msvsam_c3107 21 "%0MsvpSamValidate NOT incrementing badpassword count for user %10!s!, GuestRelativeId %11!d!: prev %12!s!, preprev %13!s!" //   LEVEL=SSP_CRED FUNC=MsvpSamValidate
+{
+&LocalUserName, ItemPWString -- 10
+GuestRelativeId, ItemLong -- 11
+IsPrev ? 'true' : 'false', ItemString -- 12
+IsPrevPrev ? 'true' : 'false', ItemString -- 13
+}
+#typev msvsam_c3100 20 "%0MsvpSamValidate incrementing badpassword count for user %10!s!, GuestRelativeId %11!d!" //   LEVEL=SSP_CRED FUNC=MsvpSamValidate
+{
+&LocalUserName, ItemPWString -- 10
+GuestRelativeId, ItemLong -- 11
+}
+#typev msvsam_c1672 15 "%0SamIGetUserLogonInformationXXX failed with %10!#x!" //   LEVEL=SSP_CRITICAL FUNC=MsvpSamValidate
+{
+Status, ItemLong -- 10
+}
+#typev msvsam_c2577 19 "%0MsvpSamValidate adding last logon info" //   LEVEL=SSP_WARNING FUNC=MsvpSamValidate
+{
+}
+#typev msvsam_c2159 18 "%0MsvpSamValidate used previous password for user %10!s!, GuestRelativeId %11!d!" //   LEVEL=SSP_CRED FUNC=MsvpSamValidate
+{
+&LocalUserName, ItemPWString -- 10
+GuestRelativeId, ItemLong -- 11
+}
+#typev msvsam_c2138 17 "%0MsvpSamValidate checked prev password failed with %10!#x!" //   LEVEL=SSP_CRITICAL FUNC=MsvpSamValidate
+{
+Status, ItemLong -- 10
+}
+#typev msvsam_c2078 16 "%0MsvpSamValidate user %10!s! requires smartcard logons" //   LEVEL=SSP_CRED FUNC=MsvpSamValidate
+{
+&LocalUserName, ItemPWString -- 10
+}

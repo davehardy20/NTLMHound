@@ -1,0 +1,1531 @@
+// PDB:  e:\9138.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\msv1_0.pdb
+// PDB:  Last Updated :2015-5-19:15:32:16:838 (UTC) [binplace]
+4c10b174-6161-11e3-7dbf-a27c9662675b dll // SRC=ctxtcli.cxx MJ= MN=
+#typev ctxtcli_cxx5596 145 "%0Using Owf from Cert" //   LEVEL=SSP_CRED FUNC=MsvGetOwfFromCert
+{
+}
+#typev ctxtcli_cxx5430 144 "%0MsvGetOwfFromCert using domain\user %10!s!" //   LEVEL=SSP_CRED FUNC=MsvGetOwfFromCert
+{
+pPasswordCred->Cred.UserName, ItemWString -- 10
+}
+#typev ctxtcli_cxx5398 143 "%0MsvGetOwfFromCert CallPackage failed with SubStatus %10!#x!" //   LEVEL=SSP_WARNING FUNC=MsvGetOwfFromCert
+{
+SubStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx5392 142 "%0MsvGetOwfFromCert CallPackage failed with Status %10!#x!" //   LEVEL=SSP_WARNING FUNC=MsvGetOwfFromCert
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx5348 141 "%0MsvGetOwfFromCert: NtLmDuplicatePassword returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=MsvGetOwfFromCert
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx5303 140 "%0MsvGetOwfFromCert checking for cert and querying passwords for it" //   LEVEL=SSP_CRED FUNC=MsvGetOwfFromCert
+{
+}
+#typev ctxtcli_cxx5234 139 "%0MsvGetOwfFromCert using saved credentials for sc user %10!s!\%11!s!" //   LEVEL=SSP_CRED FUNC=MsvGetOwfFromCert
+{
+&Context->DomainName, ItemPWString -- 10
+&Context->UserName, ItemPWString -- 11
+}
+#typev ctxtcli_cxx5766 148 "%0MsvpLookUpCredFromCredMan failed %10!#x!" //   LEVEL=SSP_CRITICAL FUNC=MsvpLookUpCredFromCredMan
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx5723 147 "%0SspiPrepareForCredRead failed %10!#x!" //   LEVEL=SSP_WARNING FUNC=MsvpLookUpCredFromCredMan
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx5688 146 "%0SspiPrepareForCredRead failed %10!#x!" //   LEVEL=SSP_WARNING FUNC=MsvpLookUpCredFromCredMan
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx1032 30 "%0SppGenerateExplicitCredAudit: ChallengeMessage.TargetName size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SppGenerateExplicitCredAudit
+{
+ChallengeMessageSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx971 29 "%0SppGenerateExplicitCredAudit: ChallengeMessage.TargetInfo size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SppGenerateExplicitCredAudit
+{
+ChallengeMessageSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx4737 134 "%0CopyCredManCredentials using domain\user %10!s!" //   LEVEL=SSP_CRED FUNC=CopyCredManCredentials
+{
+pPasswordCred->Cred.UserName, ItemWString -- 10
+}
+#typev ctxtcli_cxx4703 133 "%0CopyCredManCredentials CallPackage failed with SubStatus %10!#x!" //   LEVEL=SSP_WARNING FUNC=CopyCredManCredentials
+{
+SubStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx4696 132 "%0CopyCredManCredentials CallPackage failed with Status %10!#x!" //   LEVEL=SSP_WARNING FUNC=CopyCredManCredentials
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx4660 131 "%0CopyCredManCredentials querying passwords for cert %10!s!" //   LEVEL=SSP_CRED FUNC=CopyCredManCredentials
+{
+pPasswordForCertCred->TargetName, ItemWString -- 10
+}
+#typev ctxtcli_cxx4866 135 "%0CopyCredManCredentials no credman credential found" //   LEVEL=SSP_CRED FUNC=CopyCredManCredentials
+{
+}
+#typev ctxtcli_cxx4608 130 "%0CopyCredManCredentials copying credmain passwords" //   LEVEL=SSP_CRED FUNC=CopyCredManCredentials
+{
+}
+#typev ctxtcli_cxx4484 129 "%0CopyCredManCredentials enumerated cred[%10!u!] type=%11!u!, flags=%12!X!, target=%13!s!, user=%14!s!" //   LEVEL=SSP_CRED FUNC=CopyCredManCredentials
+{
+CredIndex, ItemLong -- 10
+Credentials[CredIndex]->Type, ItemLong -- 11
+Credentials[CredIndex]->Flags, ItemLong -- 12
+Credentials[CredIndex]->TargetName, ItemWString -- 13
+Credentials[CredIndex]->UserName, ItemWString -- 14
+}
+#typev ctxtcli_cxx4434 128 "%0CopyCredManCredentials: CrediReadDomainCredentials returned %10!x!, LogonId %11!#x!:%12!#x!" //   LEVEL=SSP_MISC FUNC=CopyCredManCredentials
+{
+Status, ItemLong -- 10
+LogonId->HighPart, ItemLong -- 11
+LogonId->LowPart, ItemLong -- 12
+}
+#typev ctxtcli_cxx4958 137 "%0using marshaled targetinfo %10!p!" //   LEVEL=SSP_TARGET FUNC=CredpExtractMarshalledTargetInfo
+{
+NewTargetInfo, ItemPtr -- 10
+}
+#typev ctxtcli_cxx5080 138 "%0CredpProcessUserNameCredential failed to find creds: username %10!s!, targetName %11!s!, status %12!#x!" //   LEVEL=SSP_CRITICAL FUNC=CredpProcessUserNameCredential
+{
+UserName, ItemPWString -- 10
+TargetInfo.TargetName, ItemWString -- 11
+Status, ItemLong -- 12
+}
+#typev ctxtcli_cxx1868 64 "%0SsprHandleChallengeMessage: ChallengeMessage bad NegotiateFlags 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessageNegotiateFlags, ItemLong -- 10
+}
+#typev ctxtcli_cxx4085 126 "%0SsprHandleChallengeMessage: Error allocating NtLmInitializeResponse." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3976 124 "%0SsprHandleChallengeMessage: Error allocating AuthenticateMessage." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3963 123 "%0SsprHandleChallengeMessage: OutputTokenSize is 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+*OutputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx3817 122 "%0SsprHandleChallengeMessage: SsprMakeSessionKey" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3783 121 "%0SsprHandleChallengeMessage: RtlUpcaseUnicodeToOemString (UserName) returned 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3769 120 "%0SsprHandleChallengeMessage: RtlUpcaseUnicodeToOemString (DomainName) returned 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3731 119 "%0failed to insert the challenge %10!#x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3694 117 "%0SsprHandleChallengeMessage: protected user %10!s!\%11!s! is not allowed: %12!#x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+&pActiveLogon->LogonDomainName, ItemPWString -- 10
+&pActiveLogon->UserName, ItemPWString -- 11
+SecStatus, ItemLong -- 12
+}
+#typev ctxtcli_cxx3663 116 "%0SsprHandleChallengeMessage: null session, turning off signing" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3627 114 "%0SsprHandleChallengeMessage: ChallengeMessage LsaCall to get ChallengeResponse returns ProtocolStatus 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3617 113 "%0SsprHandleChallengeMessage: ChallengeMessage LsaCall to get ChallengeResponse returns 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3581 112 "%0datagram or no session key allows no target" //   LEVEL=SSP_TARGET FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3560 111 "%0SsprHandleChallengeMessage turning off LM keys" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3507 110 "%0SsprHandleChallengeMessage using machine creds for localsystem" //   LEVEL=SSP_CRED FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3397 109 "%0SspHandleChallengeMessage: ChallengeMessage.TargetInfo size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+InputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx3365 108 "%0SsprHandleChallengeMessage autologon restricted creds" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3301 107 "%0SsprHandleChallengeMessage: null session context" //   LEVEL=SSP_MISC FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3290 106 "%0SsprHandleChallengeMessage: NtLmDuplicatePassword returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3262 105 "%0Unable to extract Owf from Cert: 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3241 104 "%0blocking outbound connections" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3123 103 "%0SsprHandleChallengeMessage autologon restricted for %10!s!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+TargetServerName, ItemPWString -- 10
+}
+#typev ctxtcli_cxx3013 101 "%0using target name %10!s! w/o targetinfo to lookup credman creds" //   LEVEL=SSP_TARGET FUNC=SsprHandleChallengeMessage
+{
+CredTargetInfo.TargetName, ItemWString -- 10
+}
+#typev ctxtcli_cxx2896 100 "%0SspHandleChallengeMessage: ChallengeMessage.TargetName size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+InputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx2465 94 "%0SspHandleChallengeMessage: ChallengeMessage.TargetInfo size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+InputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx2619 98 "%0SsprHandleChallengeMessage: SspHashIscChannelBindings returned 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx2488 95 "%0SsprHandleChallengeMessage server supports handshake message integrity" //   LEVEL=SSP_ML_MIC FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2444 93 "%0SspHandleChallengeMessage: ChallengeMessage size wrong when target info flag on %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+InputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx2229 84 "%0SsprHandleChallengeMessage: ChallengeMessage claimed ServerContextHandle in bad state %10!#I64x!" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessage->ServerContextHandle, ItemLongLongX -- 10
+}
+#typev ctxtcli_cxx2340 92 "%0SsprHandleChallengeMessage: Failed to allocate ClientSpecifiedTargetInfo." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2316 91 "%0SsprHandleChallengeMessage: Could not enable all privileges for loopback." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2302 90 "%0SsprHandleChallengeMessage: Could not duplicate client token 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx2285 89 "%0Reducing impersonation level %10!u! to %11!u!" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+SecurityImpersonation, ItemLong -- 10
+ImpersonationLevel, ItemLong -- 11
+}
+#typev ctxtcli_cxx2273 87 "%0SsprHandleChallengeMessage: Could not open client token 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx2245 85 "%0SsprHandleChallengeMessage using networkservice in local loopback" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2216 83 "%0SsprHandleChallengeMessage: ChallengeMessage bad ServerContextHandle %10!#I64x!" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessage->ServerContextHandle, ItemLongLongX -- 10
+}
+#typev ctxtcli_cxx2188 82 "%0SsprHandleChallengeMessage: ChallengeMessage bad ServerContextHandle %10!#I64x! (not in the list)" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessage->ServerContextHandle, ItemLongLongX -- 10
+}
+#typev ctxtcli_cxx2147 81 "%0this context is not permitted for local loopback" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2136 80 "%0SsprHandleChallengeMessage autlogon restricted for loopback" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2128 79 "%0SsprHandleChallengeMessage: invalid InputTokenSize." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2101 78 "%0SsprHandleChallengeMessage: ChallengeMessage bad NegotiateFlags 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessageNegotiateFlags, ItemLong -- 10
+}
+#typev ctxtcli_cxx2082 77 "%0SsprHandleChallengeMessage: ChallengeMessage size too small with NTLMSSP_NEGOTIATE_VERSION" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2060 75 "%0SsprHandleChallengeMessage: ChallengeMessage asked for Netware only." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2028 74 "%0SsprHandleChallengeMessage: ChallengeMessage didn't support minimum security requirements." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2006 73 "%0SsprHandleChallengeMessage: Client supported 128, but server didn't." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1995 72 "%0SsprHandleChallengeMessage: Client supported 56, but server didn't." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1940 69 "%0SsprHandleChallengeMessage: Server didn't support LM_KEY and client did." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1929 68 "%0SsprHandleChallengeMessage: Server didn't support KEY_EXCH and client did." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1918 67 "%0SsprHandleChallengeMessage: Server didn't support NTLM and client did." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1907 66 "%0SsprHandleChallengeMessage: Server didn't support NTLM2 and client did." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1834 63 "%0SsprHandleChallengeMessage: downlevel sharelevel security target" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1814 62 "%0SsprHandleChallengeMessage: ChallengeMessage GetMessage returns 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1799 61 "%0SsprHandleChallengeMessage: ChallengeMessage size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+InputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx1773 60 "%0SsprHandleChallengeMessage: invalid ContextReqFlags 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+ContextReqFlags, ItemLong -- 10
+}
+#typev ctxtcli_cxx1759 59 "%0SsprHandleChallengeMessage: Context not in NegotiateSentState" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1710 56 "%0SsprHandleChallengeMessage: (re-auth) invalid InputTokenSize." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1740 58 "%0SsprHandleChallengeMessage: Error allocating NewNullMessage." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1719 57 "%0SsprHandleChallengeMessage: invalid OutputTokenSize." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1663 55 "%0SsprHandleChallengeMessage: CredpExtractMarshalledTargetInfo returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx1630 54 "%0SsprHandleChallengeMessage: invalid context handle, missing credential." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1619 53 "%0SsprHandleChallengeMessage: invalid context handle." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1551 51 "%0SsprHandleChallengeMessage: Buffer overflow (DomainName)." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1569 52 "%0SsprHandleChallengeMessage: NtLmDuplicateUnicodeString(DomainName) returns 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1514 49 "%0SsprHandleChallengeMessage: Buffer overflow (UserName)." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1470 47 "%0SsprHandleChallengeMessage: Buffer overflow (Password)." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1531 50 "%0SsprHandleChallengeMessage: NtLmDuplicateUnicodeString(UserName) returns 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1492 48 "%0SsprHandleChallengeMessage: NtLmDuplicatePassword returns 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1441 46 "%0SsprHandleChallengeMessage: NtLmAllocatePrivateHeap(DomainName) returns NULL." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1422 45 "%0SsprHandleChallengeMessage: NtLmAllocatePrivateHeap(UserName) returns NULL." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1402 44 "%0SsprHandleChallengeMessage: NtLmAllocatePrivateHeap(Password) returns NULL." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1389 43 "%0SsprHandleChallengeMessage: null session NtLmChallengeMessage" //   LEVEL=SSP_MISC FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1369 42 "%0SsprHandleChallengeMessage: Error while allocating NtLmChallengeMessage" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1359 41 "%0SsprHandleChallengeMessage: Invalid SecondInputTokensize." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1325 40 "%0SsprHandleChallengeMessage: SspCredentialGetPassword returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1310 39 "%0SsprHandleChallengeMessage: NtLmDuplicateUnicodeString (UserName) returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx1294 38 "%0SsprHandleChallengeMessage: NtLmDuplicateUnicodeString (DomainName) returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx1274 37 "%0SsprHandleChallengeMessage: SspContextAllocateContext returns NULL." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1261 36 "%0SsprHandleChallengeMessage: invalid credential use." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1253 35 "%0SsprHandleChallengeMessage: Appcontainer trying to use default creds without capability" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1244 34 "%0SsprHandleChallengeMessage: Failed to get extended flags" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1227 33 "%0SsprHandleChallengeMessage: SspCredentialReferenceCredential returns %10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1203 32 "%0SsprHandleChallengeMessage: *ContextHandle is NULL (old-style RDR)" //   LEVEL=SSP_API_MORE FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3647 115 "%0SsprHandleChallengeMessage: null session" //   LEVEL=SSP_MISC FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3068 102 "%0using marshalled target name %10!s! to lookup credman creds" //   LEVEL=SSP_TARGET FUNC=SsprHandleChallengeMessage
+{
+CredTargetInfo.TargetName, ItemWString -- 10
+}
+#typev ctxtcli_cxx2871 99 "%0SsprHandleChallengeMessage using target name %10!s! with targetinfo to lookup credman creds" //   LEVEL=SSP_TARGET FUNC=SsprHandleChallengeMessage
+{
+CredTargetInfo.TargetName, ItemWString -- 10
+}
+#typev ctxtcli_cxx3720 118 "%0inserting the challenge %10!s! %11!s! for target %12!s!, caller %13!#x!.%14!#x!" //   LEVEL=SSP_TARGET FUNC=SsprHandleChallengeMessage
+{
+'HEX', ItemString -- 10
+LOG_LENSTR(MSV1_0_CHALLENGE_LENGTH. ChallengeMessage->Challenge), ItemHEXDump -- 11
+&Context->TargetName, ItemPWString -- 12
+CallInfo.ProcessId, ItemLong -- 13
+CallInfo.ThreadId, ItemLong -- 14
+}
+#typev ctxtcli_cxx2279 88 "%0SsprHandleChallengeMessage LOOPBACK using client token" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2254 86 "%0SsprHandleChallengeMessage: Local Call for %10!#x!:%11!#x!" //   LEVEL=SSP_CRED FUNC=SsprHandleChallengeMessage
+{
+ClientLogonId->HighPart, ItemLong -- 10
+ClientLogonId->LowPart, ItemLong -- 11
+}
+#typev ctxtcli_cxx4274 127 "%0Leaving SsprHandleChallengeMessage: 0x%10!x!" //   LEVEL=SSP_API_MORE FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx4054 125 "%0SsprHandleChallengeMessage: ChallengeFlags: %10!x! AuthenticateFlags: %11!x!" //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessageNegotiateFlags, ItemLong -- 10
+AuthenticateMessage->NegotiateFlags, ItemLong -- 11
+}
+// PDB:  e:\9138.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\msv1_0.pdb
+// PDB:  Last Updated :2015-5-19:15:32:16:838 (UTC) [binplace]
+#typev ctxtcli_cxx2559 97 "%0SsprHandleChallengeMessage adding client token restrictions length %10!d!, type %11!d!" //   LEVEL=SSP_RT FUNC=SsprHandleChallengeMessage
+{
+Context->Credential->TokenRestrictions->cbTotal, ItemLong -- 10
+Context->Credential->TokenRestrictions->TokenInfoType, ItemLong -- 11
+}
+#typev ctxtcli_cxx2543 96 "%0SsprHandleChallengeMessage server supports handshake message integrity" //   LEVEL=SSP_ML_MIC FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2077 76 "%0SsprHandleChallengeMessage: ServerVersion %10!#I64x!, Major %11!I64d!, Minor %12!I64d!, Build %13!I64d!, Revision %14!I64d!" //   LEVEL=SSP_VERSION FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessage->Version, ItemLongLongX -- 10
+Context->ServerVersion.Major, ItemLongLong -- 11
+Context->ServerVersion.Minor, ItemLongLong -- 12
+Context->ServerVersion.Build, ItemLongLong -- 13
+Context->ServerVersion.Revision, ItemLongLong -- 14
+}
+#typev ctxtcli_cxx1892 65 "%0SsprHandleChallengeMessage: Server support NTLM2 caused LM_KEY to be disabled." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1185 31 "%0Entering SsprHandleChallengeMessage" //   LEVEL=SSP_API_MORE FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx789 27 "%0SsprHandleFirstCall: Caller didn't request minimum security requirements (caller=0x%10!x! wanted=0x%11!x!)." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Context->NegotiateFlags, ItemLong -- 10
+NtLmGlobalMinimumClientSecurity, ItemLong -- 11
+}
+#typev ctxtcli_cxx753 25 "%0SsprHandleFirstCall: SspGenerateRandomBits failed" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx690 24 "%0SsprHandleFirstCall: SspGenerateRandomBits failed" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx653 23 "%0SsprHandleFirstCall autologon restricted for %10!s!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+TargetServerName, ItemPWString -- 10
+}
+#typev ctxtcli_cxx529 22 "%0SsprHandleFirstCall: Error allocating NegotiateMessage." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx519 21 "%0SsprHandleFirstCall: OutputTokenSize is %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+*OutputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx501 20 "%0SsprHandleFirstCall: NtLmDuplicateUnicodeString (GlobalOemComputerName or GlobalOemPrimaryDomainName) returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx430 19 "%0SsprHandleFirstCall: blocking outbound connections" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx255 18 "%0SsprHandleFirstCall: CredpExtractMarshalledTargetInfo returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx239 17 "%0SsprHandleFirstCall: SspCredentialGetPassword returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx226 16 "%0SsprHandleFirstCall: NtLmDuplicateUnicodeString (UserName) returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+// PDB:  e:\9138.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\msv1_0.pdb
+// PDB:  Last Updated :2015-5-19:15:32:16:838 (UTC) [binplace]
+#typev ctxtcli_cxx213 15 "%0SsprHandleFirstCall: NtLmDuplicateUnicodeString (DomainName) returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+// PDB:  e:\9138.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\msv1_0.pdb
+// PDB:  Last Updated :2015-5-19:15:32:16:838 (UTC) [binplace]
+#typev ctxtcli_cxx196 14 "%0SsprHandleFirstCall: invalid ContextReqFlags 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+ContextReqFlags, ItemLong -- 10
+}
+#typev ctxtcli_cxx175 13 "%0SsprHandleFirstCall: SspContextAllocateContext returned NULL" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx148 12 "%0SsprHandleFirstCall: invalid credential use." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx141 11 "%0SsprHandleFirstCall: invalid credential handle." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx851 28 "%0Leaving SsprHandleFirstCall: 0x%10!x!" //   LEVEL=SSP_API_MORE FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx774 26 "%0SsprHandleFirstCall: NegotiateFlags = %10!x!" //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleFirstCall
+{
+Context->NegotiateFlags, ItemLong -- 10
+}
+#typev ctxtcli_cxx102 10 "%0Entering SsprHandleFirstCall" //   LEVEL=SSP_API_MORE FUNC=SsprHandleFirstCall
+{
+}
+// PDB:  e:\9138.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\bbt-opt\msv1_0.pdb
+// PDB:  Last Updated :2015-5-19:15:33:8:979 (UTC) [binplace]
+#typev ctxtcli_cxx5596 145 "%0Using Owf from Cert" //   LEVEL=SSP_CRED FUNC=MsvGetOwfFromCert
+{
+}
+#typev ctxtcli_cxx5430 144 "%0MsvGetOwfFromCert using domain\user %10!s!" //   LEVEL=SSP_CRED FUNC=MsvGetOwfFromCert
+{
+pPasswordCred->Cred.UserName, ItemWString -- 10
+}
+#typev ctxtcli_cxx5398 143 "%0MsvGetOwfFromCert CallPackage failed with SubStatus %10!#x!" //   LEVEL=SSP_WARNING FUNC=MsvGetOwfFromCert
+{
+SubStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx5392 142 "%0MsvGetOwfFromCert CallPackage failed with Status %10!#x!" //   LEVEL=SSP_WARNING FUNC=MsvGetOwfFromCert
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx5348 141 "%0MsvGetOwfFromCert: NtLmDuplicatePassword returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=MsvGetOwfFromCert
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx5303 140 "%0MsvGetOwfFromCert checking for cert and querying passwords for it" //   LEVEL=SSP_CRED FUNC=MsvGetOwfFromCert
+{
+}
+#typev ctxtcli_cxx5234 139 "%0MsvGetOwfFromCert using saved credentials for sc user %10!s!\%11!s!" //   LEVEL=SSP_CRED FUNC=MsvGetOwfFromCert
+{
+&Context->DomainName, ItemPWString -- 10
+&Context->UserName, ItemPWString -- 11
+}
+#typev ctxtcli_cxx5766 148 "%0MsvpLookUpCredFromCredMan failed %10!#x!" //   LEVEL=SSP_CRITICAL FUNC=MsvpLookUpCredFromCredMan
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx5723 147 "%0SspiPrepareForCredRead failed %10!#x!" //   LEVEL=SSP_WARNING FUNC=MsvpLookUpCredFromCredMan
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx5688 146 "%0SspiPrepareForCredRead failed %10!#x!" //   LEVEL=SSP_WARNING FUNC=MsvpLookUpCredFromCredMan
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx1032 30 "%0SppGenerateExplicitCredAudit: ChallengeMessage.TargetName size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SppGenerateExplicitCredAudit
+{
+ChallengeMessageSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx971 29 "%0SppGenerateExplicitCredAudit: ChallengeMessage.TargetInfo size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SppGenerateExplicitCredAudit
+{
+ChallengeMessageSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx4737 134 "%0CopyCredManCredentials using domain\user %10!s!" //   LEVEL=SSP_CRED FUNC=CopyCredManCredentials
+{
+pPasswordCred->Cred.UserName, ItemWString -- 10
+}
+#typev ctxtcli_cxx4703 133 "%0CopyCredManCredentials CallPackage failed with SubStatus %10!#x!" //   LEVEL=SSP_WARNING FUNC=CopyCredManCredentials
+{
+SubStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx4696 132 "%0CopyCredManCredentials CallPackage failed with Status %10!#x!" //   LEVEL=SSP_WARNING FUNC=CopyCredManCredentials
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx4660 131 "%0CopyCredManCredentials querying passwords for cert %10!s!" //   LEVEL=SSP_CRED FUNC=CopyCredManCredentials
+{
+pPasswordForCertCred->TargetName, ItemWString -- 10
+}
+#typev ctxtcli_cxx4866 135 "%0CopyCredManCredentials no credman credential found" //   LEVEL=SSP_CRED FUNC=CopyCredManCredentials
+{
+}
+#typev ctxtcli_cxx4608 130 "%0CopyCredManCredentials copying credmain passwords" //   LEVEL=SSP_CRED FUNC=CopyCredManCredentials
+{
+}
+#typev ctxtcli_cxx4484 129 "%0CopyCredManCredentials enumerated cred[%10!u!] type=%11!u!, flags=%12!X!, target=%13!s!, user=%14!s!" //   LEVEL=SSP_CRED FUNC=CopyCredManCredentials
+{
+CredIndex, ItemLong -- 10
+Credentials[CredIndex]->Type, ItemLong -- 11
+Credentials[CredIndex]->Flags, ItemLong -- 12
+Credentials[CredIndex]->TargetName, ItemWString -- 13
+Credentials[CredIndex]->UserName, ItemWString -- 14
+}
+#typev ctxtcli_cxx4434 128 "%0CopyCredManCredentials: CrediReadDomainCredentials returned %10!x!, LogonId %11!#x!:%12!#x!" //   LEVEL=SSP_MISC FUNC=CopyCredManCredentials
+{
+Status, ItemLong -- 10
+LogonId->HighPart, ItemLong -- 11
+LogonId->LowPart, ItemLong -- 12
+}
+#typev ctxtcli_cxx4958 137 "%0using marshaled targetinfo %10!p!" //   LEVEL=SSP_TARGET FUNC=CredpExtractMarshalledTargetInfo
+{
+NewTargetInfo, ItemPtr -- 10
+}
+#typev ctxtcli_cxx5080 138 "%0CredpProcessUserNameCredential failed to find creds: username %10!s!, targetName %11!s!, status %12!#x!" //   LEVEL=SSP_CRITICAL FUNC=CredpProcessUserNameCredential
+{
+UserName, ItemPWString -- 10
+TargetInfo.TargetName, ItemWString -- 11
+Status, ItemLong -- 12
+}
+#typev ctxtcli_cxx1868 64 "%0SsprHandleChallengeMessage: ChallengeMessage bad NegotiateFlags 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessageNegotiateFlags, ItemLong -- 10
+}
+#typev ctxtcli_cxx4085 126 "%0SsprHandleChallengeMessage: Error allocating NtLmInitializeResponse." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3976 124 "%0SsprHandleChallengeMessage: Error allocating AuthenticateMessage." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3963 123 "%0SsprHandleChallengeMessage: OutputTokenSize is 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+*OutputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx3817 122 "%0SsprHandleChallengeMessage: SsprMakeSessionKey" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3783 121 "%0SsprHandleChallengeMessage: RtlUpcaseUnicodeToOemString (UserName) returned 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3769 120 "%0SsprHandleChallengeMessage: RtlUpcaseUnicodeToOemString (DomainName) returned 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3731 119 "%0failed to insert the challenge %10!#x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3694 117 "%0SsprHandleChallengeMessage: protected user %10!s!\%11!s! is not allowed: %12!#x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+&pActiveLogon->LogonDomainName, ItemPWString -- 10
+&pActiveLogon->UserName, ItemPWString -- 11
+SecStatus, ItemLong -- 12
+}
+#typev ctxtcli_cxx3663 116 "%0SsprHandleChallengeMessage: null session, turning off signing" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3627 114 "%0SsprHandleChallengeMessage: ChallengeMessage LsaCall to get ChallengeResponse returns ProtocolStatus 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3617 113 "%0SsprHandleChallengeMessage: ChallengeMessage LsaCall to get ChallengeResponse returns 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3581 112 "%0datagram or no session key allows no target" //   LEVEL=SSP_TARGET FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3560 111 "%0SsprHandleChallengeMessage turning off LM keys" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3507 110 "%0SsprHandleChallengeMessage using machine creds for localsystem" //   LEVEL=SSP_CRED FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3397 109 "%0SspHandleChallengeMessage: ChallengeMessage.TargetInfo size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+InputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx3365 108 "%0SsprHandleChallengeMessage autologon restricted creds" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3301 107 "%0SsprHandleChallengeMessage: null session context" //   LEVEL=SSP_MISC FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3290 106 "%0SsprHandleChallengeMessage: NtLmDuplicatePassword returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3262 105 "%0Unable to extract Owf from Cert: 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3241 104 "%0blocking outbound connections" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3123 103 "%0SsprHandleChallengeMessage autologon restricted for %10!s!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+TargetServerName, ItemPWString -- 10
+}
+#typev ctxtcli_cxx3013 101 "%0using target name %10!s! w/o targetinfo to lookup credman creds" //   LEVEL=SSP_TARGET FUNC=SsprHandleChallengeMessage
+{
+CredTargetInfo.TargetName, ItemWString -- 10
+}
+#typev ctxtcli_cxx2896 100 "%0SspHandleChallengeMessage: ChallengeMessage.TargetName size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+InputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx2465 94 "%0SspHandleChallengeMessage: ChallengeMessage.TargetInfo size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+InputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx2619 98 "%0SsprHandleChallengeMessage: SspHashIscChannelBindings returned 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx2488 95 "%0SsprHandleChallengeMessage server supports handshake message integrity" //   LEVEL=SSP_ML_MIC FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2444 93 "%0SspHandleChallengeMessage: ChallengeMessage size wrong when target info flag on %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+InputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx2229 84 "%0SsprHandleChallengeMessage: ChallengeMessage claimed ServerContextHandle in bad state %10!#I64x!" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessage->ServerContextHandle, ItemLongLongX -- 10
+}
+#typev ctxtcli_cxx2340 92 "%0SsprHandleChallengeMessage: Failed to allocate ClientSpecifiedTargetInfo." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2316 91 "%0SsprHandleChallengeMessage: Could not enable all privileges for loopback." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2302 90 "%0SsprHandleChallengeMessage: Could not duplicate client token 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx2285 89 "%0Reducing impersonation level %10!u! to %11!u!" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+SecurityImpersonation, ItemLong -- 10
+ImpersonationLevel, ItemLong -- 11
+}
+#typev ctxtcli_cxx2273 87 "%0SsprHandleChallengeMessage: Could not open client token 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx2245 85 "%0SsprHandleChallengeMessage using networkservice in local loopback" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2216 83 "%0SsprHandleChallengeMessage: ChallengeMessage bad ServerContextHandle %10!#I64x!" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessage->ServerContextHandle, ItemLongLongX -- 10
+}
+#typev ctxtcli_cxx2188 82 "%0SsprHandleChallengeMessage: ChallengeMessage bad ServerContextHandle %10!#I64x! (not in the list)" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessage->ServerContextHandle, ItemLongLongX -- 10
+}
+#typev ctxtcli_cxx2147 81 "%0this context is not permitted for local loopback" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2136 80 "%0SsprHandleChallengeMessage autlogon restricted for loopback" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2128 79 "%0SsprHandleChallengeMessage: invalid InputTokenSize." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2101 78 "%0SsprHandleChallengeMessage: ChallengeMessage bad NegotiateFlags 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessageNegotiateFlags, ItemLong -- 10
+}
+#typev ctxtcli_cxx2082 77 "%0SsprHandleChallengeMessage: ChallengeMessage size too small with NTLMSSP_NEGOTIATE_VERSION" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2060 75 "%0SsprHandleChallengeMessage: ChallengeMessage asked for Netware only." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2028 74 "%0SsprHandleChallengeMessage: ChallengeMessage didn't support minimum security requirements." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2006 73 "%0SsprHandleChallengeMessage: Client supported 128, but server didn't." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1995 72 "%0SsprHandleChallengeMessage: Client supported 56, but server didn't." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1940 69 "%0SsprHandleChallengeMessage: Server didn't support LM_KEY and client did." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1929 68 "%0SsprHandleChallengeMessage: Server didn't support KEY_EXCH and client did." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1918 67 "%0SsprHandleChallengeMessage: Server didn't support NTLM and client did." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1907 66 "%0SsprHandleChallengeMessage: Server didn't support NTLM2 and client did." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1834 63 "%0SsprHandleChallengeMessage: downlevel sharelevel security target" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1814 62 "%0SsprHandleChallengeMessage: ChallengeMessage GetMessage returns 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1799 61 "%0SsprHandleChallengeMessage: ChallengeMessage size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+InputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx1773 60 "%0SsprHandleChallengeMessage: invalid ContextReqFlags 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+ContextReqFlags, ItemLong -- 10
+}
+#typev ctxtcli_cxx1759 59 "%0SsprHandleChallengeMessage: Context not in NegotiateSentState" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1710 56 "%0SsprHandleChallengeMessage: (re-auth) invalid InputTokenSize." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1740 58 "%0SsprHandleChallengeMessage: Error allocating NewNullMessage." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1719 57 "%0SsprHandleChallengeMessage: invalid OutputTokenSize." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1663 55 "%0SsprHandleChallengeMessage: CredpExtractMarshalledTargetInfo returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx1630 54 "%0SsprHandleChallengeMessage: invalid context handle, missing credential." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1619 53 "%0SsprHandleChallengeMessage: invalid context handle." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1551 51 "%0SsprHandleChallengeMessage: Buffer overflow (DomainName)." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1569 52 "%0SsprHandleChallengeMessage: NtLmDuplicateUnicodeString(DomainName) returns 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1514 49 "%0SsprHandleChallengeMessage: Buffer overflow (UserName)." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1470 47 "%0SsprHandleChallengeMessage: Buffer overflow (Password)." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1531 50 "%0SsprHandleChallengeMessage: NtLmDuplicateUnicodeString(UserName) returns 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1492 48 "%0SsprHandleChallengeMessage: NtLmDuplicatePassword returns 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1441 46 "%0SsprHandleChallengeMessage: NtLmAllocatePrivateHeap(DomainName) returns NULL." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1422 45 "%0SsprHandleChallengeMessage: NtLmAllocatePrivateHeap(UserName) returns NULL." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1402 44 "%0SsprHandleChallengeMessage: NtLmAllocatePrivateHeap(Password) returns NULL." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1389 43 "%0SsprHandleChallengeMessage: null session NtLmChallengeMessage" //   LEVEL=SSP_MISC FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1369 42 "%0SsprHandleChallengeMessage: Error while allocating NtLmChallengeMessage" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1359 41 "%0SsprHandleChallengeMessage: Invalid SecondInputTokensize." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1325 40 "%0SsprHandleChallengeMessage: SspCredentialGetPassword returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1310 39 "%0SsprHandleChallengeMessage: NtLmDuplicateUnicodeString (UserName) returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx1294 38 "%0SsprHandleChallengeMessage: NtLmDuplicateUnicodeString (DomainName) returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx1274 37 "%0SsprHandleChallengeMessage: SspContextAllocateContext returns NULL." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1261 36 "%0SsprHandleChallengeMessage: invalid credential use." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1253 35 "%0SsprHandleChallengeMessage: Appcontainer trying to use default creds without capability" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1244 34 "%0SsprHandleChallengeMessage: Failed to get extended flags" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1227 33 "%0SsprHandleChallengeMessage: SspCredentialReferenceCredential returns %10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1203 32 "%0SsprHandleChallengeMessage: *ContextHandle is NULL (old-style RDR)" //   LEVEL=SSP_API_MORE FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3647 115 "%0SsprHandleChallengeMessage: null session" //   LEVEL=SSP_MISC FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3068 102 "%0using marshalled target name %10!s! to lookup credman creds" //   LEVEL=SSP_TARGET FUNC=SsprHandleChallengeMessage
+{
+CredTargetInfo.TargetName, ItemWString -- 10
+}
+#typev ctxtcli_cxx2871 99 "%0SsprHandleChallengeMessage using target name %10!s! with targetinfo to lookup credman creds" //   LEVEL=SSP_TARGET FUNC=SsprHandleChallengeMessage
+{
+CredTargetInfo.TargetName, ItemWString -- 10
+}
+#typev ctxtcli_cxx3720 118 "%0inserting the challenge %10!s! %11!s! for target %12!s!, caller %13!#x!.%14!#x!" //   LEVEL=SSP_TARGET FUNC=SsprHandleChallengeMessage
+{
+'HEX', ItemString -- 10
+LOG_LENSTR(MSV1_0_CHALLENGE_LENGTH. ChallengeMessage->Challenge), ItemHEXDump -- 11
+&Context->TargetName, ItemPWString -- 12
+CallInfo.ProcessId, ItemLong -- 13
+CallInfo.ThreadId, ItemLong -- 14
+}
+#typev ctxtcli_cxx2279 88 "%0SsprHandleChallengeMessage LOOPBACK using client token" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2254 86 "%0SsprHandleChallengeMessage: Local Call for %10!#x!:%11!#x!" //   LEVEL=SSP_CRED FUNC=SsprHandleChallengeMessage
+{
+ClientLogonId->HighPart, ItemLong -- 10
+ClientLogonId->LowPart, ItemLong -- 11
+}
+#typev ctxtcli_cxx4274 127 "%0Leaving SsprHandleChallengeMessage: 0x%10!x!" //   LEVEL=SSP_API_MORE FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx4054 125 "%0SsprHandleChallengeMessage: ChallengeFlags: %10!x! AuthenticateFlags: %11!x!" //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessageNegotiateFlags, ItemLong -- 10
+AuthenticateMessage->NegotiateFlags, ItemLong -- 11
+}
+// PDB:  e:\9138.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\bbt-opt\msv1_0.pdb
+// PDB:  Last Updated :2015-5-19:15:33:8:979 (UTC) [binplace]
+#typev ctxtcli_cxx2559 97 "%0SsprHandleChallengeMessage adding client token restrictions length %10!d!, type %11!d!" //   LEVEL=SSP_RT FUNC=SsprHandleChallengeMessage
+{
+Context->Credential->TokenRestrictions->cbTotal, ItemLong -- 10
+Context->Credential->TokenRestrictions->TokenInfoType, ItemLong -- 11
+}
+#typev ctxtcli_cxx2543 96 "%0SsprHandleChallengeMessage server supports handshake message integrity" //   LEVEL=SSP_ML_MIC FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2077 76 "%0SsprHandleChallengeMessage: ServerVersion %10!#I64x!, Major %11!I64d!, Minor %12!I64d!, Build %13!I64d!, Revision %14!I64d!" //   LEVEL=SSP_VERSION FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessage->Version, ItemLongLongX -- 10
+Context->ServerVersion.Major, ItemLongLong -- 11
+Context->ServerVersion.Minor, ItemLongLong -- 12
+Context->ServerVersion.Build, ItemLongLong -- 13
+Context->ServerVersion.Revision, ItemLongLong -- 14
+}
+#typev ctxtcli_cxx1892 65 "%0SsprHandleChallengeMessage: Server support NTLM2 caused LM_KEY to be disabled." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1185 31 "%0Entering SsprHandleChallengeMessage" //   LEVEL=SSP_API_MORE FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx789 27 "%0SsprHandleFirstCall: Caller didn't request minimum security requirements (caller=0x%10!x! wanted=0x%11!x!)." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Context->NegotiateFlags, ItemLong -- 10
+NtLmGlobalMinimumClientSecurity, ItemLong -- 11
+}
+#typev ctxtcli_cxx753 25 "%0SsprHandleFirstCall: SspGenerateRandomBits failed" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx690 24 "%0SsprHandleFirstCall: SspGenerateRandomBits failed" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx653 23 "%0SsprHandleFirstCall autologon restricted for %10!s!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+TargetServerName, ItemPWString -- 10
+}
+#typev ctxtcli_cxx529 22 "%0SsprHandleFirstCall: Error allocating NegotiateMessage." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx519 21 "%0SsprHandleFirstCall: OutputTokenSize is %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+*OutputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx501 20 "%0SsprHandleFirstCall: NtLmDuplicateUnicodeString (GlobalOemComputerName or GlobalOemPrimaryDomainName) returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx430 19 "%0SsprHandleFirstCall: blocking outbound connections" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx255 18 "%0SsprHandleFirstCall: CredpExtractMarshalledTargetInfo returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx239 17 "%0SsprHandleFirstCall: SspCredentialGetPassword returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx226 16 "%0SsprHandleFirstCall: NtLmDuplicateUnicodeString (UserName) returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+// PDB:  e:\9138.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\bbt-opt\msv1_0.pdb
+// PDB:  Last Updated :2015-5-19:15:33:8:979 (UTC) [binplace]
+#typev ctxtcli_cxx213 15 "%0SsprHandleFirstCall: NtLmDuplicateUnicodeString (DomainName) returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+// PDB:  e:\9138.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\bbt-opt\msv1_0.pdb
+// PDB:  Last Updated :2015-5-19:15:33:8:979 (UTC) [binplace]
+#typev ctxtcli_cxx196 14 "%0SsprHandleFirstCall: invalid ContextReqFlags 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+ContextReqFlags, ItemLong -- 10
+}
+#typev ctxtcli_cxx175 13 "%0SsprHandleFirstCall: SspContextAllocateContext returned NULL" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx148 12 "%0SsprHandleFirstCall: invalid credential use." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx141 11 "%0SsprHandleFirstCall: invalid credential handle." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx851 28 "%0Leaving SsprHandleFirstCall: 0x%10!x!" //   LEVEL=SSP_API_MORE FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx774 26 "%0SsprHandleFirstCall: NegotiateFlags = %10!x!" //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleFirstCall
+{
+Context->NegotiateFlags, ItemLong -- 10
+}
+#typev ctxtcli_cxx102 10 "%0Entering SsprHandleFirstCall" //   LEVEL=SSP_API_MORE FUNC=SsprHandleFirstCall
+{
+}
+// PDB:  e:\9138.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\nopogo\msv1_0.pdb
+// PDB:  Last Updated :2015-5-19:15:32:29:244 (UTC) [binplace]
+#typev ctxtcli_cxx5596 145 "%0Using Owf from Cert" //   LEVEL=SSP_CRED FUNC=MsvGetOwfFromCert
+{
+}
+#typev ctxtcli_cxx5430 144 "%0MsvGetOwfFromCert using domain\user %10!s!" //   LEVEL=SSP_CRED FUNC=MsvGetOwfFromCert
+{
+pPasswordCred->Cred.UserName, ItemWString -- 10
+}
+#typev ctxtcli_cxx5398 143 "%0MsvGetOwfFromCert CallPackage failed with SubStatus %10!#x!" //   LEVEL=SSP_WARNING FUNC=MsvGetOwfFromCert
+{
+SubStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx5392 142 "%0MsvGetOwfFromCert CallPackage failed with Status %10!#x!" //   LEVEL=SSP_WARNING FUNC=MsvGetOwfFromCert
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx5348 141 "%0MsvGetOwfFromCert: NtLmDuplicatePassword returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=MsvGetOwfFromCert
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx5303 140 "%0MsvGetOwfFromCert checking for cert and querying passwords for it" //   LEVEL=SSP_CRED FUNC=MsvGetOwfFromCert
+{
+}
+#typev ctxtcli_cxx5234 139 "%0MsvGetOwfFromCert using saved credentials for sc user %10!s!\%11!s!" //   LEVEL=SSP_CRED FUNC=MsvGetOwfFromCert
+{
+&Context->DomainName, ItemPWString -- 10
+&Context->UserName, ItemPWString -- 11
+}
+#typev ctxtcli_cxx5766 148 "%0MsvpLookUpCredFromCredMan failed %10!#x!" //   LEVEL=SSP_CRITICAL FUNC=MsvpLookUpCredFromCredMan
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx5723 147 "%0SspiPrepareForCredRead failed %10!#x!" //   LEVEL=SSP_WARNING FUNC=MsvpLookUpCredFromCredMan
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx5688 146 "%0SspiPrepareForCredRead failed %10!#x!" //   LEVEL=SSP_WARNING FUNC=MsvpLookUpCredFromCredMan
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx1032 30 "%0SppGenerateExplicitCredAudit: ChallengeMessage.TargetName size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SppGenerateExplicitCredAudit
+{
+ChallengeMessageSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx971 29 "%0SppGenerateExplicitCredAudit: ChallengeMessage.TargetInfo size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SppGenerateExplicitCredAudit
+{
+ChallengeMessageSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx4866 135 "%0CopyCredManCredentials no credman credential found" //   LEVEL=SSP_CRED FUNC=CopyCredManCredentials
+{
+}
+#typev ctxtcli_cxx4737 134 "%0CopyCredManCredentials using domain\user %10!s!" //   LEVEL=SSP_CRED FUNC=CopyCredManCredentials
+{
+pPasswordCred->Cred.UserName, ItemWString -- 10
+}
+#typev ctxtcli_cxx4703 133 "%0CopyCredManCredentials CallPackage failed with SubStatus %10!#x!" //   LEVEL=SSP_WARNING FUNC=CopyCredManCredentials
+{
+SubStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx4608 130 "%0CopyCredManCredentials copying credmain passwords" //   LEVEL=SSP_CRED FUNC=CopyCredManCredentials
+{
+}
+#typev ctxtcli_cxx4696 132 "%0CopyCredManCredentials CallPackage failed with Status %10!#x!" //   LEVEL=SSP_WARNING FUNC=CopyCredManCredentials
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx4660 131 "%0CopyCredManCredentials querying passwords for cert %10!s!" //   LEVEL=SSP_CRED FUNC=CopyCredManCredentials
+{
+pPasswordForCertCred->TargetName, ItemWString -- 10
+}
+#typev ctxtcli_cxx4484 129 "%0CopyCredManCredentials enumerated cred[%10!u!] type=%11!u!, flags=%12!X!, target=%13!s!, user=%14!s!" //   LEVEL=SSP_CRED FUNC=CopyCredManCredentials
+{
+CredIndex, ItemLong -- 10
+Credentials[CredIndex]->Type, ItemLong -- 11
+Credentials[CredIndex]->Flags, ItemLong -- 12
+Credentials[CredIndex]->TargetName, ItemWString -- 13
+Credentials[CredIndex]->UserName, ItemWString -- 14
+}
+#typev ctxtcli_cxx4434 128 "%0CopyCredManCredentials: CrediReadDomainCredentials returned %10!x!, LogonId %11!#x!:%12!#x!" //   LEVEL=SSP_MISC FUNC=CopyCredManCredentials
+{
+Status, ItemLong -- 10
+LogonId->HighPart, ItemLong -- 11
+LogonId->LowPart, ItemLong -- 12
+}
+#typev ctxtcli_cxx4958 137 "%0using marshaled targetinfo %10!p!" //   LEVEL=SSP_TARGET FUNC=CredpExtractMarshalledTargetInfo
+{
+NewTargetInfo, ItemPtr -- 10
+}
+#typev ctxtcli_cxx5080 138 "%0CredpProcessUserNameCredential failed to find creds: username %10!s!, targetName %11!s!, status %12!#x!" //   LEVEL=SSP_CRITICAL FUNC=CredpProcessUserNameCredential
+{
+UserName, ItemPWString -- 10
+TargetInfo.TargetName, ItemWString -- 11
+Status, ItemLong -- 12
+}
+#typev ctxtcli_cxx4274 127 "%0Leaving SsprHandleChallengeMessage: 0x%10!x!" //   LEVEL=SSP_API_MORE FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1868 64 "%0SsprHandleChallengeMessage: ChallengeMessage bad NegotiateFlags 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessageNegotiateFlags, ItemLong -- 10
+}
+#typev ctxtcli_cxx4085 126 "%0SsprHandleChallengeMessage: Error allocating NtLmInitializeResponse." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx4054 125 "%0SsprHandleChallengeMessage: ChallengeFlags: %10!x! AuthenticateFlags: %11!x!" //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessageNegotiateFlags, ItemLong -- 10
+AuthenticateMessage->NegotiateFlags, ItemLong -- 11
+}
+#typev ctxtcli_cxx3976 124 "%0SsprHandleChallengeMessage: Error allocating AuthenticateMessage." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3963 123 "%0SsprHandleChallengeMessage: OutputTokenSize is 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+*OutputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx3817 122 "%0SsprHandleChallengeMessage: SsprMakeSessionKey" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3783 121 "%0SsprHandleChallengeMessage: RtlUpcaseUnicodeToOemString (UserName) returned 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3769 120 "%0SsprHandleChallengeMessage: RtlUpcaseUnicodeToOemString (DomainName) returned 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3731 119 "%0failed to insert the challenge %10!#x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3720 118 "%0inserting the challenge %10!s! %11!s! for target %12!s!, caller %13!#x!.%14!#x!" //   LEVEL=SSP_TARGET FUNC=SsprHandleChallengeMessage
+{
+'HEX', ItemString -- 10
+LOG_LENSTR(MSV1_0_CHALLENGE_LENGTH. ChallengeMessage->Challenge), ItemHEXDump -- 11
+&Context->TargetName, ItemPWString -- 12
+CallInfo.ProcessId, ItemLong -- 13
+CallInfo.ThreadId, ItemLong -- 14
+}
+#typev ctxtcli_cxx3694 117 "%0SsprHandleChallengeMessage: protected user %10!s!\%11!s! is not allowed: %12!#x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+&pActiveLogon->LogonDomainName, ItemPWString -- 10
+&pActiveLogon->UserName, ItemPWString -- 11
+SecStatus, ItemLong -- 12
+}
+#typev ctxtcli_cxx3663 116 "%0SsprHandleChallengeMessage: null session, turning off signing" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3647 115 "%0SsprHandleChallengeMessage: null session" //   LEVEL=SSP_MISC FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3627 114 "%0SsprHandleChallengeMessage: ChallengeMessage LsaCall to get ChallengeResponse returns ProtocolStatus 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3617 113 "%0SsprHandleChallengeMessage: ChallengeMessage LsaCall to get ChallengeResponse returns 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3581 112 "%0datagram or no session key allows no target" //   LEVEL=SSP_TARGET FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3560 111 "%0SsprHandleChallengeMessage turning off LM keys" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3507 110 "%0SsprHandleChallengeMessage using machine creds for localsystem" //   LEVEL=SSP_CRED FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3397 109 "%0SspHandleChallengeMessage: ChallengeMessage.TargetInfo size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+InputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx3301 107 "%0SsprHandleChallengeMessage: null session context" //   LEVEL=SSP_MISC FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3365 108 "%0SsprHandleChallengeMessage autologon restricted creds" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3290 106 "%0SsprHandleChallengeMessage: NtLmDuplicatePassword returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3262 105 "%0Unable to extract Owf from Cert: 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx3241 104 "%0blocking outbound connections" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx3123 103 "%0SsprHandleChallengeMessage autologon restricted for %10!s!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+TargetServerName, ItemPWString -- 10
+}
+#typev ctxtcli_cxx3068 102 "%0using marshalled target name %10!s! to lookup credman creds" //   LEVEL=SSP_TARGET FUNC=SsprHandleChallengeMessage
+{
+CredTargetInfo.TargetName, ItemWString -- 10
+}
+#typev ctxtcli_cxx3013 101 "%0using target name %10!s! w/o targetinfo to lookup credman creds" //   LEVEL=SSP_TARGET FUNC=SsprHandleChallengeMessage
+{
+CredTargetInfo.TargetName, ItemWString -- 10
+}
+#typev ctxtcli_cxx2896 100 "%0SspHandleChallengeMessage: ChallengeMessage.TargetName size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+InputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx2871 99 "%0SsprHandleChallengeMessage using target name %10!s! with targetinfo to lookup credman creds" //   LEVEL=SSP_TARGET FUNC=SsprHandleChallengeMessage
+{
+CredTargetInfo.TargetName, ItemWString -- 10
+}
+#typev ctxtcli_cxx2619 98 "%0SsprHandleChallengeMessage: SspHashIscChannelBindings returned 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx2543 96 "%0SsprHandleChallengeMessage server supports handshake message integrity" //   LEVEL=SSP_ML_MIC FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2559 97 "%0SsprHandleChallengeMessage adding client token restrictions length %10!d!, type %11!d!" //   LEVEL=SSP_RT FUNC=SsprHandleChallengeMessage
+{
+Context->Credential->TokenRestrictions->cbTotal, ItemLong -- 10
+Context->Credential->TokenRestrictions->TokenInfoType, ItemLong -- 11
+}
+#typev ctxtcli_cxx2488 95 "%0SsprHandleChallengeMessage server supports handshake message integrity" //   LEVEL=SSP_ML_MIC FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2465 94 "%0SspHandleChallengeMessage: ChallengeMessage.TargetInfo size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+InputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx2444 93 "%0SspHandleChallengeMessage: ChallengeMessage size wrong when target info flag on %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+InputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx2188 82 "%0SsprHandleChallengeMessage: ChallengeMessage bad ServerContextHandle %10!#I64x! (not in the list)" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessage->ServerContextHandle, ItemLongLongX -- 10
+}
+#typev ctxtcli_cxx2229 84 "%0SsprHandleChallengeMessage: ChallengeMessage claimed ServerContextHandle in bad state %10!#I64x!" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessage->ServerContextHandle, ItemLongLongX -- 10
+}
+#typev ctxtcli_cxx2340 92 "%0SsprHandleChallengeMessage: Failed to allocate ClientSpecifiedTargetInfo." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2316 91 "%0SsprHandleChallengeMessage: Could not enable all privileges for loopback." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2302 90 "%0SsprHandleChallengeMessage: Could not duplicate client token 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx2285 89 "%0Reducing impersonation level %10!u! to %11!u!" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+SecurityImpersonation, ItemLong -- 10
+ImpersonationLevel, ItemLong -- 11
+}
+#typev ctxtcli_cxx2279 88 "%0SsprHandleChallengeMessage LOOPBACK using client token" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2273 87 "%0SsprHandleChallengeMessage: Could not open client token 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx2254 86 "%0SsprHandleChallengeMessage: Local Call for %10!#x!:%11!#x!" //   LEVEL=SSP_CRED FUNC=SsprHandleChallengeMessage
+{
+ClientLogonId->HighPart, ItemLong -- 10
+ClientLogonId->LowPart, ItemLong -- 11
+}
+#typev ctxtcli_cxx2245 85 "%0SsprHandleChallengeMessage using networkservice in local loopback" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2216 83 "%0SsprHandleChallengeMessage: ChallengeMessage bad ServerContextHandle %10!#I64x!" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessage->ServerContextHandle, ItemLongLongX -- 10
+}
+#typev ctxtcli_cxx2147 81 "%0this context is not permitted for local loopback" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2136 80 "%0SsprHandleChallengeMessage autlogon restricted for loopback" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2101 78 "%0SsprHandleChallengeMessage: ChallengeMessage bad NegotiateFlags 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessageNegotiateFlags, ItemLong -- 10
+}
+#typev ctxtcli_cxx2082 77 "%0SsprHandleChallengeMessage: ChallengeMessage size too small with NTLMSSP_NEGOTIATE_VERSION" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2128 79 "%0SsprHandleChallengeMessage: invalid InputTokenSize." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2077 76 "%0SsprHandleChallengeMessage: ServerVersion %10!#I64x!, Major %11!I64d!, Minor %12!I64d!, Build %13!I64d!, Revision %14!I64d!" //   LEVEL=SSP_VERSION FUNC=SsprHandleChallengeMessage
+{
+ChallengeMessage->Version, ItemLongLongX -- 10
+Context->ServerVersion.Major, ItemLongLong -- 11
+Context->ServerVersion.Minor, ItemLongLong -- 12
+Context->ServerVersion.Build, ItemLongLong -- 13
+Context->ServerVersion.Revision, ItemLongLong -- 14
+}
+#typev ctxtcli_cxx2060 75 "%0SsprHandleChallengeMessage: ChallengeMessage asked for Netware only." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2028 74 "%0SsprHandleChallengeMessage: ChallengeMessage didn't support minimum security requirements." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx2006 73 "%0SsprHandleChallengeMessage: Client supported 128, but server didn't." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1995 72 "%0SsprHandleChallengeMessage: Client supported 56, but server didn't." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1940 69 "%0SsprHandleChallengeMessage: Server didn't support LM_KEY and client did." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1929 68 "%0SsprHandleChallengeMessage: Server didn't support KEY_EXCH and client did." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1918 67 "%0SsprHandleChallengeMessage: Server didn't support NTLM and client did." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1907 66 "%0SsprHandleChallengeMessage: Server didn't support NTLM2 and client did." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1892 65 "%0SsprHandleChallengeMessage: Server support NTLM2 caused LM_KEY to be disabled." //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1834 63 "%0SsprHandleChallengeMessage: downlevel sharelevel security target" //   LEVEL=SSP_WARNING FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1814 62 "%0SsprHandleChallengeMessage: ChallengeMessage GetMessage returns 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1799 61 "%0SsprHandleChallengeMessage: ChallengeMessage size wrong %10!ld!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+InputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx1773 60 "%0SsprHandleChallengeMessage: invalid ContextReqFlags 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+ContextReqFlags, ItemLong -- 10
+}
+#typev ctxtcli_cxx1759 59 "%0SsprHandleChallengeMessage: Context not in NegotiateSentState" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1710 56 "%0SsprHandleChallengeMessage: (re-auth) invalid InputTokenSize." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1740 58 "%0SsprHandleChallengeMessage: Error allocating NewNullMessage." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1719 57 "%0SsprHandleChallengeMessage: invalid OutputTokenSize." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1663 55 "%0SsprHandleChallengeMessage: CredpExtractMarshalledTargetInfo returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx1630 54 "%0SsprHandleChallengeMessage: invalid context handle, missing credential." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1619 53 "%0SsprHandleChallengeMessage: invalid context handle." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1551 51 "%0SsprHandleChallengeMessage: Buffer overflow (DomainName)." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1569 52 "%0SsprHandleChallengeMessage: NtLmDuplicateUnicodeString(DomainName) returns 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1514 49 "%0SsprHandleChallengeMessage: Buffer overflow (UserName)." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1470 47 "%0SsprHandleChallengeMessage: Buffer overflow (Password)." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1531 50 "%0SsprHandleChallengeMessage: NtLmDuplicateUnicodeString(UserName) returns 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1492 48 "%0SsprHandleChallengeMessage: NtLmDuplicatePassword returns 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1441 46 "%0SsprHandleChallengeMessage: NtLmAllocatePrivateHeap(DomainName) returns NULL." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1422 45 "%0SsprHandleChallengeMessage: NtLmAllocatePrivateHeap(UserName) returns NULL." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1402 44 "%0SsprHandleChallengeMessage: NtLmAllocatePrivateHeap(Password) returns NULL." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1389 43 "%0SsprHandleChallengeMessage: null session NtLmChallengeMessage" //   LEVEL=SSP_MISC FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1369 42 "%0SsprHandleChallengeMessage: Error while allocating NtLmChallengeMessage" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1359 41 "%0SsprHandleChallengeMessage: Invalid SecondInputTokensize." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1325 40 "%0SsprHandleChallengeMessage: SspCredentialGetPassword returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1310 39 "%0SsprHandleChallengeMessage: NtLmDuplicateUnicodeString (UserName) returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx1294 38 "%0SsprHandleChallengeMessage: NtLmDuplicateUnicodeString (DomainName) returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx1274 37 "%0SsprHandleChallengeMessage: SspContextAllocateContext returns NULL." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1261 36 "%0SsprHandleChallengeMessage: invalid credential use." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1253 35 "%0SsprHandleChallengeMessage: Appcontainer trying to use default creds without capability" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1244 34 "%0SsprHandleChallengeMessage: Failed to get extended flags" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1227 33 "%0SsprHandleChallengeMessage: SspCredentialReferenceCredential returns %10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleChallengeMessage
+{
+SecStatus, ItemLong -- 10
+}
+#typev ctxtcli_cxx1203 32 "%0SsprHandleChallengeMessage: *ContextHandle is NULL (old-style RDR)" //   LEVEL=SSP_API_MORE FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx1185 31 "%0Entering SsprHandleChallengeMessage" //   LEVEL=SSP_API_MORE FUNC=SsprHandleChallengeMessage
+{
+}
+#typev ctxtcli_cxx851 28 "%0Leaving SsprHandleFirstCall: 0x%10!x!" //   LEVEL=SSP_API_MORE FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx789 27 "%0SsprHandleFirstCall: Caller didn't request minimum security requirements (caller=0x%10!x! wanted=0x%11!x!)." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Context->NegotiateFlags, ItemLong -- 10
+NtLmGlobalMinimumClientSecurity, ItemLong -- 11
+}
+#typev ctxtcli_cxx774 26 "%0SsprHandleFirstCall: NegotiateFlags = %10!x!" //   LEVEL=SSP_NEGOTIATE_FLAGS FUNC=SsprHandleFirstCall
+{
+Context->NegotiateFlags, ItemLong -- 10
+}
+#typev ctxtcli_cxx753 25 "%0SsprHandleFirstCall: SspGenerateRandomBits failed" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx690 24 "%0SsprHandleFirstCall: SspGenerateRandomBits failed" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx653 23 "%0SsprHandleFirstCall autologon restricted for %10!s!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+TargetServerName, ItemPWString -- 10
+}
+#typev ctxtcli_cxx529 22 "%0SsprHandleFirstCall: Error allocating NegotiateMessage." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx519 21 "%0SsprHandleFirstCall: OutputTokenSize is %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+*OutputTokenSize, ItemLong -- 10
+}
+#typev ctxtcli_cxx501 20 "%0SsprHandleFirstCall: NtLmDuplicateUnicodeString (GlobalOemComputerName or GlobalOemPrimaryDomainName) returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx430 19 "%0SsprHandleFirstCall: blocking outbound connections" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx255 18 "%0SsprHandleFirstCall: CredpExtractMarshalledTargetInfo returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx239 17 "%0SsprHandleFirstCall: SspCredentialGetPassword returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx226 16 "%0SsprHandleFirstCall: NtLmDuplicateUnicodeString (UserName) returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx213 15 "%0SsprHandleFirstCall: NtLmDuplicateUnicodeString (DomainName) returned %10!d!" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+Status, ItemLong -- 10
+}
+#typev ctxtcli_cxx196 14 "%0SsprHandleFirstCall: invalid ContextReqFlags 0x%10!x!." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+ContextReqFlags, ItemLong -- 10
+}
+#typev ctxtcli_cxx175 13 "%0SsprHandleFirstCall: SspContextAllocateContext returned NULL" //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx148 12 "%0SsprHandleFirstCall: invalid credential use." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx141 11 "%0SsprHandleFirstCall: invalid credential handle." //   LEVEL=SSP_CRITICAL FUNC=SsprHandleFirstCall
+{
+}
+#typev ctxtcli_cxx102 10 "%0Entering SsprHandleFirstCall" //   LEVEL=SSP_API_MORE FUNC=SsprHandleFirstCall
+{
+}

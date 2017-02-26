@@ -1,0 +1,212 @@
+// PDB:  o:\blue.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\msv1_0.pdb
+// PDB:  Last Updated :2016-4-9:22:15:3:291 (UTC) [binplace]
+41e1efec-24cc-feef-d5c5-5e419897894b dll // SRC=utility.cxx MJ= MN=
+#typev ctxtapi_cxx267 22 "%0SspGetMechlistMICBuffer peer not updated (with mechtoken as mic)" //   LEVEL=SSP_WARNING FUNC=SpInitLsaModeContext
+{
+}
+// PDB:  o:\blue.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\msv1_0.pdb
+// PDB:  Last Updated :2016-4-9:22:15:3:291 (UTC) [binplace]
+#typev ctxtapi_cxx245 14 "%0SspGetTokenBuffer: No token passed in" //   LEVEL=SSP_API_MORE FUNC=SpInitLsaModeContext
+{
+}
+// PDB:  o:\blue.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\msv1_0.pdb
+// PDB:  Last Updated :2016-4-9:22:15:3:291 (UTC) [binplace]
+#typev ctxtapi_cxx255 14 "%0SspGetTokenBuffer: No token passed in" //   LEVEL=SSP_API_MORE FUNC=SpInitLsaModeContext
+{
+}
+#typev ctxtapi_cxx218 14 "%0SspGetTokenBuffer: No token passed in" //   LEVEL=SSP_API_MORE FUNC=SpInitLsaModeContext
+{
+}
+// PDB:  o:\blue.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\msv1_0.pdb
+// PDB:  Last Updated :2016-4-9:22:15:3:291 (UTC) [binplace]
+#typev credhand_cxx347 11 "%0Leaving SspHidePassword" //   LEVEL=SSP_API_MORE FUNC=SspCredentialLookupCredential
+{
+}
+#typev credhand_cxx347 10 "%0Entering SspHidePassword" //   LEVEL=SSP_API_MORE FUNC=SspCredentialLookupCredential
+{
+}
+// PDB:  o:\blue.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\msv1_0.pdb
+// PDB:  Last Updated :2016-4-9:22:15:3:291 (UTC) [binplace]
+#typev utility_cxx933 16 "%0failed to register IP address notifications" //   LEVEL=SSP_CRITICAL FUNC=SspInitializeObserver
+{
+}
+#typev utility_cxx908 15 "%0intializing IP address observer" //   LEVEL=SSP_UPDATES FUNC=SspInitializeObserver
+{
+}
+#typev utility_cxx1789 21 "%0NtOpenProcess failed with status %10!#x!" //   LEVEL=SSP_CRITICAL FUNC=SspGetProcessName
+{
+Status, ItemLong -- 10
+}
+#typev utility_cxx420 14 "%0SspGetTokenBuffer: No token passed in" //   LEVEL=SSP_API_MORE FUNC=SspGetTokenBuffer
+{
+}
+#typev utility_cxx288 11 "%0Leaving SspHidePassword" //   LEVEL=SSP_API_MORE FUNC=SspHidePassword
+{
+}
+#typev utility_cxx281 10 "%0Entering SspHidePassword" //   LEVEL=SSP_API_MORE FUNC=SspHidePassword
+{
+}
+#typev utility_cxx1093 17 "%0GetAdaptersAddresses failed" //   LEVEL=SSP_CRITICAL FUNC=SspIPAddressObserverCallback
+{
+}
+#typev utility_cxx1212 18 "%0GetAddrInfoW failed with %10!#x!: %11!s!" //   LEVEL=SSP_WARNING FUNC=SspIsIpAddressLocal
+{
+WSAGetLastError(), ItemLong -- 10
+gai_strerrorA(Err), ItemString -- 11
+}
+#typev utility_cxx2349 24 "%0SspIsTargetAllowed: Null target is %10!s!" //   LEVEL=SSP_API FUNC=SspIsTargetAllowed
+{
+(*IsAllowed)?'allowed':'blocked', ItemString -- 10
+}
+#typev utility_cxx2345 23 "%0SspIsTargetAllowed: Target %10!s! is %11!s!" //   LEVEL=SSP_API FUNC=SspIsTargetAllowed
+{
+Target, ItemPWString -- 10
+(*IsAllowed)?'allowed':'blocked', ItemString -- 11
+}
+#typev utility_cxx1603 20 "%0checking if loopback allowed %10!s!" //   LEVEL=SSP_TARGET FUNC=SspIsTargetLocalhost
+{
+Target, ItemPWString -- 10
+}
+#typev utility_cxx318 13 "%0Leaving SspRevealPassword" //   LEVEL=SSP_API_MORE FUNC=SspRevealPassword
+{
+}
+#typev utility_cxx311 12 "%0Entering SspRevealPassword" //   LEVEL=SSP_API_MORE FUNC=SspRevealPassword
+{
+}
+#typev utility_cxx1348 19 "%0Error duplicating unicode string 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprGetTargetHostName
+{
+Status, ItemLong -- 10
+}
+// PDB:  o:\blue.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\bbt-opt\msv1_0.pdb
+// PDB:  Last Updated :2016-4-9:22:15:44:514 (UTC) [binplace]
+#typev ctxtapi_cxx267 22 "%0SspGetMechlistMICBuffer peer not updated (with mechtoken as mic)" //   LEVEL=SSP_WARNING FUNC=SpInitLsaModeContext
+{
+}
+// PDB:  o:\blue.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\bbt-opt\msv1_0.pdb
+// PDB:  Last Updated :2016-4-9:22:15:44:514 (UTC) [binplace]
+#typev ctxtapi_cxx245 14 "%0SspGetTokenBuffer: No token passed in" //   LEVEL=SSP_API_MORE FUNC=SpInitLsaModeContext
+{
+}
+// PDB:  o:\blue.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\bbt-opt\msv1_0.pdb
+// PDB:  Last Updated :2016-4-9:22:15:44:514 (UTC) [binplace]
+#typev ctxtapi_cxx255 14 "%0SspGetTokenBuffer: No token passed in" //   LEVEL=SSP_API_MORE FUNC=SpInitLsaModeContext
+{
+}
+#typev ctxtapi_cxx218 14 "%0SspGetTokenBuffer: No token passed in" //   LEVEL=SSP_API_MORE FUNC=SpInitLsaModeContext
+{
+}
+// PDB:  o:\blue.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\bbt-opt\msv1_0.pdb
+// PDB:  Last Updated :2016-4-9:22:15:44:514 (UTC) [binplace]
+#typev credhand_cxx347 11 "%0Leaving SspHidePassword" //   LEVEL=SSP_API_MORE FUNC=SspCredentialLookupCredential
+{
+}
+#typev credhand_cxx347 10 "%0Entering SspHidePassword" //   LEVEL=SSP_API_MORE FUNC=SspCredentialLookupCredential
+{
+}
+// PDB:  o:\blue.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\bbt-opt\msv1_0.pdb
+// PDB:  Last Updated :2016-4-9:22:15:44:514 (UTC) [binplace]
+#typev utility_cxx933 16 "%0failed to register IP address notifications" //   LEVEL=SSP_CRITICAL FUNC=SspInitializeObserver
+{
+}
+#typev utility_cxx908 15 "%0intializing IP address observer" //   LEVEL=SSP_UPDATES FUNC=SspInitializeObserver
+{
+}
+#typev utility_cxx1789 21 "%0NtOpenProcess failed with status %10!#x!" //   LEVEL=SSP_CRITICAL FUNC=SspGetProcessName
+{
+Status, ItemLong -- 10
+}
+#typev utility_cxx420 14 "%0SspGetTokenBuffer: No token passed in" //   LEVEL=SSP_API_MORE FUNC=SspGetTokenBuffer
+{
+}
+#typev utility_cxx288 11 "%0Leaving SspHidePassword" //   LEVEL=SSP_API_MORE FUNC=SspHidePassword
+{
+}
+#typev utility_cxx281 10 "%0Entering SspHidePassword" //   LEVEL=SSP_API_MORE FUNC=SspHidePassword
+{
+}
+#typev utility_cxx1093 17 "%0GetAdaptersAddresses failed" //   LEVEL=SSP_CRITICAL FUNC=SspIPAddressObserverCallback
+{
+}
+#typev utility_cxx1212 18 "%0GetAddrInfoW failed with %10!#x!: %11!s!" //   LEVEL=SSP_WARNING FUNC=SspIsIpAddressLocal
+{
+WSAGetLastError(), ItemLong -- 10
+gai_strerrorA(Err), ItemString -- 11
+}
+#typev utility_cxx2349 24 "%0SspIsTargetAllowed: Null target is %10!s!" //   LEVEL=SSP_API FUNC=SspIsTargetAllowed
+{
+(*IsAllowed)?'allowed':'blocked', ItemString -- 10
+}
+#typev utility_cxx2345 23 "%0SspIsTargetAllowed: Target %10!s! is %11!s!" //   LEVEL=SSP_API FUNC=SspIsTargetAllowed
+{
+Target, ItemPWString -- 10
+(*IsAllowed)?'allowed':'blocked', ItemString -- 11
+}
+#typev utility_cxx1603 20 "%0checking if loopback allowed %10!s!" //   LEVEL=SSP_TARGET FUNC=SspIsTargetLocalhost
+{
+Target, ItemPWString -- 10
+}
+#typev utility_cxx318 13 "%0Leaving SspRevealPassword" //   LEVEL=SSP_API_MORE FUNC=SspRevealPassword
+{
+}
+#typev utility_cxx311 12 "%0Entering SspRevealPassword" //   LEVEL=SSP_API_MORE FUNC=SspRevealPassword
+{
+}
+#typev utility_cxx1348 19 "%0Error duplicating unicode string 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprGetTargetHostName
+{
+Status, ItemLong -- 10
+}
+// PDB:  o:\blue.obj.amd64fre\ds\security\protocols\msv_sspi\dll\objfre\amd64\nopogo\msv1_0.pdb
+// PDB:  Last Updated :2016-4-9:22:15:14:89 (UTC) [binplace]
+#typev utility_cxx933 16 "%0failed to register IP address notifications" //   LEVEL=SSP_CRITICAL FUNC=SspInitializeObserver
+{
+}
+#typev utility_cxx908 15 "%0intializing IP address observer" //   LEVEL=SSP_UPDATES FUNC=SspInitializeObserver
+{
+}
+#typev utility_cxx1911 22 "%0SspGetMechlistMICBuffer peer not updated (with mechtoken as mic)" //   LEVEL=SSP_WARNING FUNC=SspGetMechlistMICBuffer
+{
+}
+#typev utility_cxx1789 21 "%0NtOpenProcess failed with status %10!#x!" //   LEVEL=SSP_CRITICAL FUNC=SspGetProcessName
+{
+Status, ItemLong -- 10
+}
+#typev utility_cxx420 14 "%0SspGetTokenBuffer: No token passed in" //   LEVEL=SSP_API_MORE FUNC=SspGetTokenBuffer
+{
+}
+#typev utility_cxx288 11 "%0Leaving SspHidePassword" //   LEVEL=SSP_API_MORE FUNC=SspHidePassword
+{
+}
+#typev utility_cxx281 10 "%0Entering SspHidePassword" //   LEVEL=SSP_API_MORE FUNC=SspHidePassword
+{
+}
+#typev utility_cxx1093 17 "%0GetAdaptersAddresses failed" //   LEVEL=SSP_CRITICAL FUNC=SspIPAddressObserverCallback
+{
+}
+#typev utility_cxx1212 18 "%0GetAddrInfoW failed with %10!#x!: %11!s!" //   LEVEL=SSP_WARNING FUNC=SspIsIpAddressLocal
+{
+WSAGetLastError(), ItemLong -- 10
+gai_strerrorA(Err), ItemString -- 11
+}
+#typev utility_cxx2349 24 "%0SspIsTargetAllowed: Null target is %10!s!" //   LEVEL=SSP_API FUNC=SspIsTargetAllowed
+{
+(*IsAllowed)?'allowed':'blocked', ItemString -- 10
+}
+#typev utility_cxx2345 23 "%0SspIsTargetAllowed: Target %10!s! is %11!s!" //   LEVEL=SSP_API FUNC=SspIsTargetAllowed
+{
+Target, ItemPWString -- 10
+(*IsAllowed)?'allowed':'blocked', ItemString -- 11
+}
+#typev utility_cxx1603 20 "%0checking if loopback allowed %10!s!" //   LEVEL=SSP_TARGET FUNC=SspIsTargetLocalhost
+{
+Target, ItemPWString -- 10
+}
+#typev utility_cxx318 13 "%0Leaving SspRevealPassword" //   LEVEL=SSP_API_MORE FUNC=SspRevealPassword
+{
+}
+#typev utility_cxx311 12 "%0Entering SspRevealPassword" //   LEVEL=SSP_API_MORE FUNC=SspRevealPassword
+{
+}
+#typev utility_cxx1348 19 "%0Error duplicating unicode string 0x%10!x!" //   LEVEL=SSP_CRITICAL FUNC=SsprGetTargetHostName
+{
+Status, ItemLong -- 10
+}
