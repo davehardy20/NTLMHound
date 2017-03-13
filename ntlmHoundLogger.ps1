@@ -26,13 +26,13 @@
 
 
 Param(
-    [Parameter (HelpMessage="Choose Mode for running the script. 1 - enable ETW tracing, 2 - disable ETW tracing")]
+    [Parameter(HelpMessage="Choose Mode for running the script. 1 - enable ETW tracing, 2 - disable ETW tracing")]
     [ValidateNotNullOrEmpty()]
     [string]$Mode = '1',
-    [Parameter (HelpMessage="Time frame in minutes for ETW tracing")]
+    [Parameter(HelpMessage="Time frame in minutes for ETW tracing")]
     [ValidateNotNullOrEmpty()]
     [string]$Timeframe = "1",
-    [Parameter (HelpMessage="A file path to a folder where to store the resulting files")]
+    [Parameter(HelpMessage="A file path to a folder where to store the resulting files")]
     [ValidateNotNullOrEmpty()]
     [string]$Logpath = ".\ETL"
 )
