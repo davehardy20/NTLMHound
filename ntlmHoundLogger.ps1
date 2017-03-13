@@ -97,8 +97,7 @@ Write-Output("2. Disable ETW Tracing")
 
 if ($mode -eq "1")
 {
-Start-Process -FilePath ".\tracelog.exe" -ArgumentList "-stop ntlm"
-
+Start-Process -FilePath ".\tracelog.exe" -ArgumentList "-stop ntlm" | Out-Null
 
 while (!(Test-Path $Logpath))
 {
