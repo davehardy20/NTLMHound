@@ -47,7 +47,7 @@ $regex = 'user\s\"(?<user>[\w|\-|\$_.]+)\",\sdomain\s\"(?<domain>[\w|\-|\$_.]+)\
 
 gc "$Logpath\decoded\*.decoded.log" |?{$_ -match $regex}|%{$matches['domain']+"\"+$matches['user']+";"+$matches['workstation']+";"+$matches['buflen']} | Sort-Object| Get-Unique | Foreach-Object {
         # send the current line to output
-        if ($_ -match ";18") 
+        if ($_ -match ";18\b")
         {
             #Add LM-NTLMv1 tag
             "$_;LM-or-NTLMv1"
